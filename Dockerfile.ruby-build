@@ -8,6 +8,9 @@ FROM centos
 # Install git
 RUN yum install -y git
 
+# Install readline
+RUN yum install -y readline-devel
+
 # Install ruby dependencies
 RUN yum install -y gcc openssl-devel
 

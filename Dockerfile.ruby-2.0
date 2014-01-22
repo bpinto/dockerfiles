@@ -14,7 +14,7 @@ RUN \
 # Install ruby
 RUN \
   source /.profile ;\
-  ruby-build $RUBY_VERSION /usr/local/lib/$RUBY_VERSION
+  CONFIGURE_OPTS="--with-readline-dir=/usr/include/readline" ruby-build $RUBY_VERSION /usr/local/lib/$RUBY_VERSION
 
 # Configure gem installations
 RUN \
